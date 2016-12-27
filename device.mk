@@ -1,4 +1,4 @@
-LOCAL_PATH := device/xiaomi/nikel
+LOCAL_PATH := device/vernee/k15tb_a
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
@@ -7,7 +7,7 @@ PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Recovery allowed devices
-TARGET_OTA_ASSERT_DEVICE := nikel
+TARGET_OTA_ASSERT_DEVICE := ApolloLite,apollolite,k15tb_a
 
 PRODUCT_PACKAGES += \
    libmtk_symbols \
@@ -15,7 +15,7 @@ PRODUCT_PACKAGES += \
    
 # Kernel
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/xiaomi/nikel/prebuilt/kernel
+	LOCAL_KERNEL := device/vernee/k15tb_a/prebuilt/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -86,11 +86,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
-# Dalvik/HWUI
-$(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
+# Dalvik heap configurations
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-4096-dalvik-heap.mk)
+
+# Call hwui memory config
+$(call inherit-product-if-exists, frameworks/native/build/phone-xxxhdpi-4096-hwui-memory.mk)
 
 # Common stuff
-$(call inherit-product, device/xiaomi/nikel/common.mk)
+$(call inherit-product, device/vernee/k15tb_a/common.mk)
 
 # Vendor
-$(call inherit-product, vendor/xiaomi/nikel/nikel-vendor.mk)
+$(call inherit-product, vendor/vernee/k15tb_a/k15tb_a-vendor.mk)

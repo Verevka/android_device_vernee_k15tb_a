@@ -1,5 +1,5 @@
 # Common overlays
-DEVICE_PACKAGE_OVERLAYS += device/xiaomi/nikel/overlay
+DEVICE_PACKAGE_OVERLAYS += device/vernee/k15tb_a/overlay
 
 # Display
 PRODUCT_PACKAGES += \
@@ -7,7 +7,7 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-    device/xiaomi/nikel/configs/etc/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
+    device/vernee/k15tb_a/configs/etc/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml
 
 # Gello
 # PRODUCT_PACKAGES += \
@@ -57,7 +57,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # include other configs
-include device/xiaomi/nikel/permissions.mk
-include device/xiaomi/nikel/media.mk
-include device/xiaomi/nikel/wifi.mk
-include device/xiaomi/nikel/telephony.mk
+include device/vernee/k15tb_a/permissions.mk
+include device/vernee/k15tb_a/media.mk
+include device/vernee/k15tb_a/wifi.mk
+include device/vernee/k15tb_a/telephony.mk

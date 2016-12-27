@@ -245,4 +245,11 @@
 
     <!-- Control whether Night display is available. -->
     <bool name="config_nightDisplayAvailable">true</bool>
+	
+	    <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+    autodetected from the Configuration. -->
+    <bool name="config_showNavigationBar">true</bool>
+	
+    <!-- Button illumination -->
+    <bool name="config_deviceHasVariableButtonBrightness">false</bool>
 </resources>

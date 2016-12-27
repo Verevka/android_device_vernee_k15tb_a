@@ -6,7 +6,7 @@ USE_OPENGL_RENDERER := true
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
-BOARD_EGL_CFG := device/xiaomi/nikel/configs/etc/egl.cfg
+BOARD_EGL_CFG := device/vernee/k15tb_a/configs/etc/egl.cfg
 
 # Boot animation
 TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
@@ -25,9 +25,6 @@ WIFI_DRIVER_FW_PATH_STA := STA
 WIFI_DRIVER_FW_PATH_AP := AP
 WIFI_DRIVER_FW_PATH_P2P := P2P
 
-# Consumerir
-MTK_IRTX_SUPPORT := true
- 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 

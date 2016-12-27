@@ -1,3 +1,3 @@
-add_lunch_combo full_nikel-user
-add_lunch_combo full_nikel-userdebug
-add_lunch_combo full_nikel-eng
+add_lunch_combo full_k15tb_a-user
+add_lunch_combo full_k15tb_a-userdebug
+add_lunch_combo full_k15tb_a-eng

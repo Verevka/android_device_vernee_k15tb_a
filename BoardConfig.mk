@@ -1,7 +1,7 @@
 # mt6797 platform boardconfig
-LOCAL_PATH := device/xiaomi/nikel
+LOCAL_PATH := device/vernee/k15tb_a
 
-include device/xiaomi/nikel/board.mk
+include device/vernee/k15tb_a/board.mk
 
 # Platform
 ARCH_ARM_HAVE_TLS_REGISTER := true
@@ -46,12 +46,16 @@ BOARD_MKBOOTIMG_ARGS := \
 	--ramdisk_offset 0x04f88000 \
 	--second_offset 0x00000000 \
 	--tags_offset 0x03f88000 \
-	--board nikel
+	--board k15tb_a
 
 # Hack for building without kernel sources
-ifeq ($(TARGET_DEVICE),nikel)
+ifeq ($(TARGET_DEVICE),k15tb_a)
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 endif
+
+#BLOCK_BASED_OTA
+BLOCK_BASED_OTA := false
+USE_NINJA := false
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE:=3221225472
